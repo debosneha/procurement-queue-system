@@ -1,0 +1,37 @@
+{% extends 'base.html' %}
+
+{% block head %}
+<title>Home</title>
+{% endblock %}
+
+{% block body %}
+<div class="content">
+        <h1>Registered Farmers</h1>
+
+        {% if users %}
+            <table>
+                <tr>
+                    <th>Name</th>
+                    <th>Phone</th>
+                    <th>Address</th>
+                    <th>Crop Type</th>
+                    <th>Quantity</th>
+                    <th>Center</th>
+                </tr>
+
+                {% for user in users %}
+                <tr>
+                    <td>{{ user.name }}</td>
+                    <td>{{ user.phone }}</td>
+                    <td>{{ user.address }}</td>
+                    <td>{{ user.crop_type }}</td>
+                    <td>{{ user.quantity }}</td>
+                    <td>{{ user.center }}</td>
+                </tr>
+                {% endfor %}
+            </table>
+        {% else %}
+            <h4>No users registered yet.</h4>
+        {% endif %}
+    </div>
+{% endblock %}

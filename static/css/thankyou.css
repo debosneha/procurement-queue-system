@@ -1,0 +1,51 @@
+:root {
+    --primary: #166534;
+    --primary-light: #16a34a;
+    --bg-light: #ecfdf5;
+    --text-muted: #4b5563;
+}
+
+body {
+    font-family: 'Segoe UI', Arial, sans-serif;
+    background: linear-gradient(135deg, #ecfdf5 0%, #d1fae5 100%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.box {
+    background: white;
+    padding: 48px 64px;
+    border-radius: 16px;
+    box-shadow: 0 20px 40px rgba(22,101,52,0.1), 0 2px 8px rgba(0,0,0,0.04);
+    text-align: center;
+    max-width: 400px;
+    border-top: 4px solid var(--primary-light);
+    animation: fadeInUp 0.5s ease-out;
+}
+
+h1 {
+    color: var(--primary);
+    margin: 0 0 12px;
+    font-size: 1.75rem;
+    font-weight: 700;
+}
+
+p {
+    color: var(--text-muted);
+    margin-bottom: 0;
+    line-height: 1.5;
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}

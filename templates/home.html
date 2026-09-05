@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+
+{% block head %}
+<title>Farmer Registration</title>
+{% endblock %}
+
+{% block extra_css %}
+<link rel="stylesheet" href="{{url_for('static',filename='css/home.css')}}">
+{% endblock %}
+
+{% block body %}
+<div class="box">
+        <h1>Welcome to Farmers Registration</h1>
+        <a href="/register" class="btn">Register Now</a>
+    </div>
+{% endblock %}
