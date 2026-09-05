@@ -1,19 +1,11 @@
-<!DOCTYPE html>
-<html>
-<head>
-<<<<<<< HEAD
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    {% block head %}{% endblock %}
-</head>
-<body>
-     {% block body %}{% endblock %}
-=======
-    <title>Farmer Registration</title>
-</head>
-<body>
-    <h1>Farmer Registration</h1>
+{% extends 'register.html' %}
+
+{% block head %}
+<title>Farmer Registration</title>
+{% endblock %}
+
+{% block body %}
+<h1>Farmer Registration</h1>
     <form action="/register" method="POST">
         <label>Name:</label><br>
         <input type="text" name="name" required><br><br>
@@ -39,6 +31,4 @@
 
         <button type="submit">Register</button>
     </form>
->>>>>>> 981ffbc2e434dd2effdee9206daf6cec6a67d916
-</body>
-</html>
+{% endblock %}
