@@ -21,7 +21,7 @@ def register():
 
         return f"Thanks {name}! You're registered for {crop_type} ({quantity} quintals) at {center}."
     
-    return render_template('index.html')
+    return render_template('register.html')
 
 if __name__ == '__main__':
     app.run(debug=True)
